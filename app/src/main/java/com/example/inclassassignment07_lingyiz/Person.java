@@ -1,6 +1,8 @@
 package com.example.inclassassignment07_lingyiz;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     String PERSON_DATA = "return data";
     String name;
     String age;

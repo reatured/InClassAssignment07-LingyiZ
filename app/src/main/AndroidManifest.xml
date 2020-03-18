@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InputWindow"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".InputWindow"
+            android:label="Add a New Person"></activity>
+        <activity android:name=".MainActivity"
+            android:label="Display All the People">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

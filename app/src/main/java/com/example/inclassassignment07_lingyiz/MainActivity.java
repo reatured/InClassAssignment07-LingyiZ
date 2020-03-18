@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         displayPanel = findViewById(R.id.displayPanel);
+        summary = "Person List: \n";
     }
 
 
@@ -36,13 +37,16 @@ public class MainActivity extends AppCompatActivity {
             // Make sure the request was successful
             if (resultCode == RESULT_OK) {
                 //change display panel
-                displayPanel.setText(finalizeDisplayPanel());
+                displayPanel.setText(finalizeDisplayPanel((Person)data.getSerializableExtra("Return")));
             }
         }
     }
 
-    String finalizeDisplayPanel(){
-        summary = "getExtra here";
+    String finalizeDisplayPanel(Person addedPerson){
+
+        summary = summary+
+                "\nName: " + addedPerson.getName() +
+                "\nAge: " + addedPerson.getAge() + "\n";
         return summary;
     }
 }

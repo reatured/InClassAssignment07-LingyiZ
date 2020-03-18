@@ -21,8 +21,9 @@ public class InputWindow extends AppCompatActivity {
     }
 
     public void submitPerson(View view){
+        Person newPerson = new Person(name.getText().toString(), age.getText().toString());
         Intent data = new Intent();
-        data.putExtra("Return", "RETURN");
+        data.putExtra("Return", newPerson);
         setResult(RESULT_OK, data);
         finish();
     }
